@@ -1,0 +1,102 @@
+---
+import interior_5 from '../assets/images/interior_5.jpeg';
+import interior_6 from '../assets/images/interior_6.jpeg';
+import interior_7 from '../assets/images/interior_7.jpeg';
+---
+
+<section class="py-24 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col lg:flex-row gap-16 items-center">
+      
+      <!-- Left side: Swiper Gallery -->
+      <div class="w-full lg:w-1/2 gs-spec-img">
+        <div class="swiper specsSwiper w-full h-[450px] md:h-[550px] rounded-3xl shadow-2xl relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src={interior_5.src} alt="Spec 1" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src={interior_6.src} alt="Spec 2" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src={interior_7.src} alt="Spec 3" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- Right side: Text details -->
+      <div class="w-full lg:w-1/2 gs-spec-text">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-dark mb-8">Technical Specifications</h2>
+        
+        <div class="space-y-6">
+          <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <h4 class="text-primary font-bold text-xl mb-1 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
+              Clear Height
+            </h4>
+            <p class="text-gray-700 text-lg">9.75 m (optimizing storage volume).</p>
+          </div>
+          
+          <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <h4 class="text-primary font-bold text-xl mb-1 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+              Floor Load Capacity
+            </h4>
+            <p class="text-gray-700 text-lg">10 tons per square meter (ideal for heavy machinery).</p>
+          </div>
+          
+          <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <h4 class="text-primary font-bold text-xl mb-1 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              Equipment & Green Areas
+            </h4>
+            <p class="text-gray-700 text-lg">Leveling ramps, loading docks, fire protection systems, water reuse system, and LED lighting.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  import Swiper from 'swiper';
+  import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/pagination';
+  import 'swiper/css/effect-fade';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Initialize Swiper
+    new Swiper('.specsSwiper', {
+      modules: [Pagination, Autoplay, EffectFade],
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+      autoplay: { delay: 4000, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      loop: true,
+    });
+
+    // GSAP Animations
+    gsap.from('.gs-spec-img', {
+      scrollTrigger: { trigger: '.gs-spec-img', start: "top 80%" },
+      x: -50, opacity: 0, duration: 1, ease: "power3.out"
+    });
+    
+    gsap.from('.gs-spec-text', {
+      scrollTrigger: { trigger: '.gs-spec-text', start: "top 80%" },
+      x: 50, opacity: 0, duration: 1, ease: "power3.out"
+    });
+  });
+</script>

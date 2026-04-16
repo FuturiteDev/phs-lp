@@ -1,0 +1,133 @@
+---
+import ext1 from '../assets/images/exterior_1.jpeg';
+import ext2 from '../assets/images/exterior_2.jpeg';
+import ext3 from '../assets/images/exterior_3.jpeg';
+import ext4 from '../assets/images/exterior_4.jpeg';
+import ext5 from '../assets/images/exterior_5.jpeg';
+import ext9 from '../assets/images/exterior_9.jpeg';
+import ext10 from '../assets/images/exterior_10.jpeg';
+---
+
+<section class="bg-gray-100 py-24 relative">
+  <div class="bg-primary absolute top-0 left-0 w-full h-[300px] z-0"></div> <!-- Yellow Banner background via Tailwind -->
+  
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16 text-dark gs-spaces-title">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Ready to Operate Spaces</h2>
+      <p class="text-lg md:text-xl font-medium max-w-2xl mx-auto">PHS infrastructure designed to seamlessly integrate into your supply chain.</p>
+    </div>
+    
+    <!-- Top Big Showcase with Swiper -->
+    <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row mb-12 gs-spaces-card group">
+      <div class="w-full md:w-2/3 h-[400px] md:h-[500px]">
+        <div class="swiper spacesBigSwiper w-full h-full">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src={ext1.src} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="ATC Logistics Park III" /></div>
+            <div class="swiper-slide"><img src={ext9.src} class="w-full h-full object-cover" alt="ATC Logistics Park III View 2" /></div>
+            <div class="swiper-slide"><img src={ext10.src} class="w-full h-full object-cover" alt="ATC Logistics Park III View 3" /></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 p-10 flex flex-col justify-center items-center text-center bg-white">
+        <h3 class="text-3xl font-extrabold text-dark mb-2">ATC Logistics Park III</h3>
+        <p class="text-gray-600 font-medium mb-8 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+          Apodaca, Nuevo León.
+        </p>
+        <a href="#contact" class="inline-block px-10 py-4 bg-dark text-white font-bold rounded-full w-full max-w-[250px] uppercase transition-shadow duration-300 hover:bg-primary hover:text-dark hover:-translate-y-1 shadow-lg">
+          Contact us
+        </a>
+      </div>
+    </div>
+    
+    <!-- Bottom Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Card I -->
+      <div class="bg-white rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group gs-spaces-mini">
+        <div class="h-48 overflow-hidden relative">
+          <img src={ext2.src} alt="ATC Logistics Park I" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-dark/10 group-hover:bg-transparent transition-colors"></div>
+        </div>
+        <div class="p-6 text-center">
+          <h4 class="text-xl font-bold text-dark mb-1">ATC Logistics Park I</h4>
+          <p class="text-gray-500 text-sm font-medium">Salinas Victoria, Nuevo León.</p>
+        </div>
+      </div>
+      
+      <!-- Card II -->
+      <div class="bg-white rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group gs-spaces-mini">
+        <div class="h-48 overflow-hidden relative">
+          <img src={ext3.src} alt="ATC Logistics Park II" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-dark/10 group-hover:bg-transparent transition-colors"></div>
+        </div>
+        <div class="p-6 text-center">
+          <h4 class="text-xl font-bold text-dark mb-1">ATC Logistics Park II</h4>
+          <p class="text-gray-500 text-sm font-medium">Salinas Victoria, Nuevo León.</p>
+        </div>
+      </div>
+
+      <!-- Card IV -->
+      <div class="bg-white rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group gs-spaces-mini">
+        <div class="h-48 overflow-hidden relative">
+          <img src={ext4.src} alt="ATC Logistics Park IV" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-dark/10 group-hover:bg-transparent transition-colors"></div>
+        </div>
+        <div class="p-6 text-center">
+          <h4 class="text-xl font-bold text-dark mb-1">ATC Logistics Park IV</h4>
+          <p class="text-gray-500 text-sm font-medium">Pesquería, Nuevo León.</p>
+        </div>
+      </div>
+
+      <!-- Card V -->
+      <div class="bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group gs-spaces-mini">
+        <div class="h-48 overflow-hidden relative">
+          <img src={ext5.src} alt="ATC Logistics Park V" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-dark/10 group-hover:bg-transparent transition-colors"></div>
+        </div>
+        <div class="p-6 text-center">
+          <h4 class="text-xl font-bold text-dark mb-1">ATC Logistics Park V</h4>
+          <p class="text-gray-500 text-sm font-medium">Pesquería, Nuevo León.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  import Swiper from 'swiper';
+  import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Top Swiper
+    new Swiper('.spacesBigSwiper', {
+      modules: [Pagination, Autoplay, EffectFade],
+      effect: 'fade',
+      loop: true,
+      autoplay: { delay: 3500 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+    });
+
+    // GSAP
+    gsap.fromTo('.gs-spaces-title', 
+      { y: 30, opacity: 0 },
+      { scrollTrigger: { trigger: '.gs-spaces-title', start: "top 80%" }, y: 0, opacity: 1, duration: 0.8 }
+    );
+    
+    gsap.fromTo('.gs-spaces-card', 
+      { y: 50, opacity: 0 },
+      { scrollTrigger: { trigger: '.gs-spaces-title', start: "top 60%" }, y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    );
+
+    gsap.fromTo('.gs-spaces-mini', 
+      { y: 40, opacity: 0 },
+      { scrollTrigger: { trigger: '.gs-spaces-card', start: "top 20%" }, y: 0, opacity: 1, stagger: 0.1, duration: 0.8, ease: "back.out(1.2)", clearProps: "all" }
+    );
+  });
+</script>

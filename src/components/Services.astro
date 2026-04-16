@@ -1,0 +1,55 @@
+---
+import interior_2 from '../assets/images/interior_2.jpeg';
+---
+
+<section class="bg-light relative overflow-hidden pt-12 pb-24">
+  <div class="bg-primary w-full py-8 text-center shadow-md mb-16 rotate-1 transform scale-105">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-dark inline-block -rotate-1">Our Services</h2>
+  </div>
+  
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col lg:flex-row gap-12 items-center gs-reveal">
+      <div class="w-full lg:w-1/2 rounded-3xl overflow-hidden shadow-2xl relative group">
+        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-color"></div>
+        <img src={interior_2.src} alt="Services Interior" class="w-full h-auto object-cover min-h-[400px] transform group-hover:scale-105 transition-transform duration-700" />
+      </div>
+      
+      <div class="w-full lg:w-1/2 flex flex-col gap-8">
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+          We offer total flexibility for your company's expansion. Whether you are looking for immediate availability in our established parks or a project designed from scratch, we deliver spaces under industry-full standards, guaranteeing:
+        </p>
+        
+        <ul class="flex flex-col gap-6">
+          <li class="flex items-start gap-4">
+            <span class="flex-none bg-primary text-dark rounded-full w-8 h-8 flex items-center justify-center font-bold text-xl mt-1 shadow-sm">✓</span>
+            <p class="text-gray-800 text-lg">
+              <strong class="font-bold text-dark block mb-1">Ready-to-use:</strong> 
+              Inventory of months, spaces available for immediate occupancy, with full utility readiness and rapid implementation so you can start operations without delays.
+            </p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="flex-none bg-primary text-dark rounded-full w-8 h-8 flex items-center justify-center font-bold text-xl mt-1 shadow-sm">✓</span>
+            <p class="text-gray-800 text-lg">
+              <strong class="font-bold text-dark block mb-1">Built-to-suit:</strong> 
+              Custom scalability through planning and construction tailored to your specific processes, logistics flows, and growth projections.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.fromTo('.gs-reveal', 
+      { y: 60, opacity: 0 },
+      { scrollTrigger: { trigger: '.gs-reveal', start: "top 85%" }, y: 0, opacity: 1, duration: 1, ease: "power3.out", clearProps: "all" }
+    );
+  });
+</script>
