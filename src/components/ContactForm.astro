@@ -41,7 +41,7 @@ import formBg from '../assets/images/exterior_7.jpeg';
         </div>
         
         <button type="submit" class="mt-4 px-8 py-4 bg-primary text-dark font-bold text-lg rounded-xl uppercase tracking-wider hover:bg-white hover:text-dark transition-all duration-300 shadow-lg hover:shadow-primary/50 transform hover:-translate-y-1">
-          <span id="btnText">Enviar Mensaje</span>
+          <span id="btnText">Send Message</span>
         </button>
         
         <div id="formMessage" class="hidden mt-4 p-4 rounded-xl text-center font-medium font-body transition-all"></div>
@@ -97,7 +97,7 @@ import formBg from '../assets/images/exterior_7.jpeg';
         formMessage.textContent = 'There was an error sending your message. Please try again later.';
         formMessage.classList.add('bg-red-500/20', 'text-red-200', 'border', 'border-red-500/30');
       } finally {
-        btnText.textContent = 'Enviar Mensaje';
+        btnText.textContent = 'Send Message';
         setTimeout(() => {
           formMessage.classList.add('hidden');
           formMessage.className = 'hidden mt-4 p-4 rounded-xl text-center font-medium font-body transition-all';
