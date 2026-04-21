@@ -1,13 +1,13 @@
 ---
-import phsLogo from '../assets/images/logotipo-phs-EN-BLANCO.png';
+import phsLogo from '../../assets/images/logotipo-phs-EN-BLANCO.png';
 ---
 
 <header class="relative w-full h-[80vh] min-h-[600px] flex flex-col justify-between overflow-hidden bg-dark">
   <!-- GSAP Background Element -->
   <div class="absolute inset-0 z-0 opacity-40">
     <img 
-      src={(await import('../assets/images/exterior_8.jpeg')).default.src} 
-      alt="Hero Background" 
+      src={(await import('../../assets/images/exterior_8.jpeg')).default.src} 
+      alt="Fondo Hero" 
       class="w-full h-full object-cover hero-bg-img"
     />
     <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-dark/30 to-transparent"></div>
@@ -19,13 +19,13 @@ import phsLogo from '../assets/images/logotipo-phs-EN-BLANCO.png';
   
   <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pb-20 flex flex-col items-start justify-end h-full gap-6">
     <h1 class="hero-title text-primary text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-left">
-      Industrial<br/>Warehouse Leasing
+      Renta de<br/>naves industriales
     </h1>
     <p class="hero-desc text-white text-lg font-light max-w-lg text-left">
-      Find the ideal industrial facility for your company within our logistics parks.
+      Encuentra la nave industrial ideal para tu empresa en nuestros parques logísticos.
     </p>
     <a href="#contact" class="hero-btn inline-block px-8 py-4 bg-white text-dark font-bold uppercase tracking-wide rounded-lg transition-all hover:bg-primary hover:scale-105 shadow-xl">
-      Contact us now
+      Contáctanos ahora
     </a>
   </div>
 </header>
@@ -33,7 +33,6 @@ import phsLogo from '../assets/images/logotipo-phs-EN-BLANCO.png';
 <script>
   import { gsap } from 'gsap';
   
-  // Animation on load
   document.addEventListener("DOMContentLoaded", () => {
     const tl = gsap.timeline();
     

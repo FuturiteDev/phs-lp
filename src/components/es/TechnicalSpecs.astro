@@ -1,0 +1,108 @@
+---
+import interior_5 from '../../assets/images/interior_5.jpeg';
+import interior_6 from '../../assets/images/interior_6.jpeg';
+import interior_7 from '../../assets/images/interior_7.jpeg';
+---
+
+<section class="py-24 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 gs-spec-title">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-dark">Especificaciones Técnicas</h2>
+    </div>
+    
+    <div class="flex flex-col lg:flex-row gap-16 items-center">
+      
+      <!-- Galería -->
+      <div class="w-full lg:w-1/2 gs-spec-img">
+        <div class="swiper specsSwiper w-full h-[450px] md:h-[550px] rounded-3xl shadow-2xl relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src={interior_5.src} alt="Especificación 1" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src={interior_6.src} alt="Especificación 2" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src={interior_7.src} alt="Especificación 3" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- Detalles -->
+      <div class="w-full lg:w-1/2 gs-spec-text">
+        <ul class="flex flex-col gap-4">
+          <li class="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="flex-none h-7 w-7 text-primary mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
+            <p class="text-gray-800 text-lg">
+              <strong class="font-bold text-primary block mb-1">Espacio:</strong> 
+              Desde los 3,500 m².
+            </p>
+          </li>
+          <li class="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="flex-none h-7 w-7 text-primary mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" /></svg>
+            <p class="text-gray-800 text-lg">
+              <strong class="font-bold text-primary block mb-1">Altura Libre:</strong> 
+              9.75 m (optimizando volumen de almacenamiento).
+            </p>
+          </li>
+          <li class="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="flex-none h-7 w-7 text-primary mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+            <p class="text-gray-800 text-lg">
+              <strong class="font-bold text-primary block mb-1">Resistencia de Piso:</strong> 
+              19 toneladas por metro cuadrado (ideal para maquinaria pesada).
+            </p>
+          </li>
+          <li class="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="flex-none h-7 w-7 text-primary mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            <p class="text-gray-800 text-lg">
+              <strong class="font-bold text-primary block mb-1">Equipamiento:</strong> 
+              Rampas niveladoras, andenes de carga y sistemas de protección contra incendios.
+            </p>
+          </li>
+          <li class="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="flex-none h-7 w-7 text-primary mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <p class="text-gray-800 text-lg">
+              <strong class="font-bold text-primary block mb-1">Sustentabilidad:</strong> 
+              Planta tratadora de agua, paneles solares e iluminación LED con ahorro energético.
+            </p>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  import Swiper from 'swiper';
+  import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/pagination';
+  import 'swiper/css/effect-fade';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    new Swiper('.specsSwiper', {
+      modules: [Pagination, Autoplay, EffectFade],
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+      autoplay: { delay: 4000, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      loop: true,
+    });
+
+    gsap.from('.gs-spec-title', { scrollTrigger: { trigger: '.gs-spec-title', start: "top 80%" }, y: 30, opacity: 0, duration: 1, ease: "power3.out" });
+    gsap.from('.gs-spec-img', { scrollTrigger: { trigger: '.gs-spec-img', start: "top 80%" }, x: -50, opacity: 0, duration: 1, ease: "power3.out" });
+    gsap.from('.gs-spec-text', { scrollTrigger: { trigger: '.gs-spec-text', start: "top 80%" }, x: 50, opacity: 0, duration: 1, ease: "power3.out" });
+  });
+</script>

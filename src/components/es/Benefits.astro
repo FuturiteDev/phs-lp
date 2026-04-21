@@ -1,0 +1,78 @@
+---
+---
+
+<section class="py-24 bg-[#E5E7EB] relative">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 bento-title-anim">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-dark inline-block relative">
+        Beneficios Clave
+        <span class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary"></span>
+      </h2>
+    </div>
+    
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Tarjeta 1: Ancha - Oscura -->
+      <div class="bento-card-anim md:col-span-2">
+        <div class="relative overflow-hidden rounded-3xl bg-[#212121] p-10 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-3xl font-extrabold mb-3 text-[#FFCB42]">Operación Inmediata</h3>
+          <p class="text-gray-300 text-lg leading-relaxed">Tu bodega industrial en renta lista para usar con factibilidad total de servicios (CFE, agua y Fibra Óptica) para no perder ni un día de producción.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: Cuadrada - Amarilla -->
+      <div class="bento-card-anim">
+        <div class="relative overflow-hidden rounded-3xl bg-[#FFCB42] p-8 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-2xl font-extrabold mb-3 text-[#212121]">Infraestructura de Vanguardia</h3>
+          <p class="text-[#212121]/80 text-lg leading-relaxed">Tu bodega industrial en renta lista para usar con factibilidad total de servicios (CFE, agua y Fibra Óptica) para no perder ni un día de producción.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Cuadrada - Blanca -->
+      <div class="bento-card-anim">
+        <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-2xl font-extrabold mb-3 text-[#212121]">Eficiencia Logística</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Ubicación en puntos estrátegicos de Nuevo León, optimizando tiempos de traslado y costos operativos.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4: Ancha - Blanca -->
+      <div class="bento-card-anim md:col-span-2">
+        <div class="relative overflow-hidden rounded-3xl bg-white p-10 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-3xl font-extrabold mb-3 text-[#212121]">Seguridad y Control</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Parques industriales con planeación de infraestructura y urbanización, acceso controlado y monitoreo.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 5: Cuadrada - Oscura -->
+      <div class="bento-card-anim">
+        <div class="relative overflow-hidden rounded-3xl bg-[#212121] p-8 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-2xl font-extrabold mb-3 text-[#FFCB42]">Sustentabilidad Real</h3>
+          <p class="text-gray-300 text-lg leading-relaxed">Proyectos planeados con certificación LEED, iluminación LED y planta tratadora de agua.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 6: 2 cols - Borde amarillo -->
+      <div class="bento-card-anim md:col-span-2">
+        <div class="relative overflow-hidden rounded-3xl bg-white border-l-8 border-[#FFCB42] p-10 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-2xl font-extrabold mb-3 text-[#212121]">Acceso a Talento</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Naves industriales en Nuevo León situadas en zonas de alta densidad laboral para asegurar la contratación de personal calificado.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.fromTo('.bento-title-anim', { y: 40, opacity: 0 }, { scrollTrigger: { trigger: '.bento-title-anim', start: "top 80%" }, y: 0, opacity: 1, duration: 0.8 });
+    gsap.fromTo('.bento-card-anim', { y: 60, opacity: 0 }, { scrollTrigger: { trigger: '.bento-title-anim', start: "top 60%" }, y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "back.out(1.2)", clearProps: "all" });
+  });
+</script>
