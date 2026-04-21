@@ -1,53 +1,60 @@
 ---
-import formBg from '../assets/images/exterior_7.jpeg';
+import formImg from '../assets/images/interior_3.jpeg';
 ---
 
-<section id="contact" class="min-h-screen relative flex items-center justify-center py-24 overflow-hidden">
-  <!-- Immersive Background -->
-  <div class="absolute inset-0 z-0">
-    <img src={formBg.src} alt="Exterior Park" class="w-full h-full object-cover gs-form-bg" />
-    <div class="absolute inset-0 bg-dark/70"></div>
+<section id="contact" class="min-h-screen flex flex-col overflow-hidden">
+
+  <!-- Top: Centered Title -->
+  <div class="bg-primary py-10 text-center gs-form-title">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-dark">Move-in Ready Spaces</h2>
   </div>
 
-  <div class="container relative z-10 mx-auto px-6 max-w-4xl">
-    <div class="text-center mb-12 gs-form-title">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-primary mb-4">Optimize your transit times</h2>
-      <p class="text-xl text-white font-light">Let's discuss how we can reduce your operating costs.</p>
+  <!-- Bottom: Split layout -->
+  <div class="flex flex-col lg:flex-row flex-1">
+
+    <!-- Left: Yellow + Image full height -->
+    <div class="hidden lg:flex w-1/2 bg-primary relative overflow-hidden">
+      <img src={formImg.src} alt="Industrial Interior" class="gs-form-bg absolute inset-0 w-full h-full object-cover" />
     </div>
 
-    <!-- Glassmorphism Card -->
-    <div class="bg-black/20 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl mx-auto p-8 md:p-12 gs-form-card">
-      <form id="contactForm" class="flex flex-col gap-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Right: Yellow Form Panel -->
+    <div class="w-full lg:w-1/2 bg-primary flex flex-col justify-center px-8 md:px-16 py-16">
+      <div class="gs-form-card mb-8">
+        <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark leading-tight">Let's discuss your<br/>industrial project.</h3>
+      </div>
+
+      <form id="contactForm" class="flex flex-col gap-5 gs-form-card">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div class="flex flex-col">
-            <label for="nombre" class="text-white text-sm font-medium mb-2">Full name</label>
-            <input type="text" id="nombre" name="nombre" class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white/20 transition-all font-body" placeholder="John Doe" required>
+            <label for="nombre" class="text-dark text-sm font-semibold mb-1">Full name</label>
+            <input type="text" id="nombre" name="nombre" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="John Doe" required>
           </div>
-          
           <div class="flex flex-col">
-            <label for="telefono" class="text-white text-sm font-medium mb-2">Phone</label>
-            <input type="tel" id="telefono" name="telefono" class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white/20 transition-all font-body" placeholder="(555) 000-0000" required>
+            <label for="telefono" class="text-dark text-sm font-semibold mb-1">Phone</label>
+            <input type="tel" id="telefono" name="telefono" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="(555) 000-0000" required>
           </div>
         </div>
-        
+
         <div class="flex flex-col">
-          <label for="correo" class="text-white text-sm font-medium mb-2">Email</label>
-          <input type="email" id="correo" name="correo" class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white/20 transition-all font-body" placeholder="john@example.com" required>
+          <label for="correo" class="text-dark text-sm font-semibold mb-1">Email</label>
+          <input type="email" id="correo" name="correo" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="john@example.com" required>
         </div>
-        
+
         <div class="flex flex-col">
-          <label for="mensaje" class="text-white text-sm font-medium mb-2">Message</label>
-          <textarea id="mensaje" name="mensaje" rows="4" class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white/20 transition-all font-body resize-y" placeholder="Tell us about your project..." required></textarea>
+          <label for="mensaje" class="text-dark text-sm font-semibold mb-1">Message</label>
+          <textarea id="mensaje" name="mensaje" rows="3" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body resize-none" placeholder="Tell us about your project..." required></textarea>
         </div>
-        
-        <button type="submit" class="mt-4 px-8 py-4 bg-primary text-dark font-bold text-lg rounded-xl uppercase tracking-wider hover:bg-white hover:text-dark transition-all duration-300 shadow-lg hover:shadow-primary/50 transform hover:-translate-y-1">
-          <span id="btnText">Send Message</span>
+
+        <button type="submit" class="mt-4 px-8 py-4 bg-white text-dark font-bold text-lg rounded-lg uppercase tracking-wider hover:bg-dark hover:text-white transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+          <span id="btnText">Submit</span>
         </button>
-        
-        <div id="formMessage" class="hidden mt-4 p-4 rounded-xl text-center font-medium font-body transition-all"></div>
+
+        <div id="formMessage" class="hidden mt-2 p-4 rounded-xl text-center font-medium font-body transition-all"></div>
       </form>
     </div>
+
   </div>
+
 </section>
 
 <script>

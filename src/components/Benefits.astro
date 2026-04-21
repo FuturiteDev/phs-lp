@@ -1,9 +1,7 @@
 ---
-import bgImg1 from '../assets/images/interior_1.jpeg';
-import bgImg2 from '../assets/images/interior_4.jpeg';
 ---
 
-<section class="py-24 bg-[#E5E7EB] relative"> <!-- Explicit standard gray background -->
+<section class="py-24 bg-[#E5E7EB] relative">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-16 bento-title-anim">
       <h2 class="text-4xl md:text-5xl font-extrabold text-dark inline-block relative">
@@ -12,69 +10,57 @@ import bgImg2 from '../assets/images/interior_4.jpeg';
       </h2>
     </div>
     
-    <!-- Bento Grid Setup -->
-    <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-6 auto-rows-fr">
-      
-      <!-- Card 1: Large (spans 2 cols) with image bg -->
-      <div class="bento-card-anim md:col-span-2 md:row-span-2">
-        <div class="relative overflow-hidden rounded-3xl bg-white shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-end text-white !p-0 h-full min-h-[300px]">
-          <img src={bgImg1.src} class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-110" alt="Immediate Operation" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#212121] via-[#212121]/70 to-transparent"></div>
-          <div class="relative z-10 p-8 pt-32">
-            <h3 class="text-2xl font-bold mb-3 text-[#FFCB42]">Immediate Operation</h3>
-            <p class="text-white text-lg">Ready-to-use spaces with full utility access (light, power, water, and fiber optics) so you don't lose a single day of production.</p>
-          </div>
-        </div>
-      </div>
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-      <!-- Card 2: Square Standard -->
-      <div class="bento-card-anim">
-        <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full">
-          <h3 class="text-2xl font-bold mb-3 text-[#212121]">State of the Art Infrastructure</h3>
-          <p class="text-gray-600 text-lg">Construction including 10+ tilt-up walling that guarantee durability, advanced clear height, and technical specifications for your business.</p>
-        </div>
-      </div>
-
-      <!-- Card 3: Square Primary -->
-      <div class="bento-card-anim">
-        <div class="relative overflow-hidden rounded-3xl p-8 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center bg-[#FFCB42] text-[#212121] h-full">
-          <h3 class="text-2xl font-bold mb-3 text-[#212121]">Logistical Efficiency</h3>
-          <p class="text-[#212121]/80 font-medium text-lg">Strategically located throughout Nuevo León, with excellent air connectivity to optimize transit times and operational costs.</p>
-        </div>
-      </div>
-
-      <!-- Card 4: Standard -->
-      <div class="bento-card-anim">
-        <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full">
-          <h3 class="text-2xl font-bold mb-3 text-[#212121]">Security and Control</h3>
-          <p class="text-gray-600 text-lg">Consolidated industrial environment with master-planned infrastructure, controlled access, and 24/7 monitoring.</p>
-        </div>
-      </div>
-
-      <!-- Card 5: Large Row (spans 2 cols) -->
+      <!-- Card 1: Wide (2 cols) - Dark -->
       <div class="bento-card-anim md:col-span-2">
-        <div class="relative overflow-hidden rounded-3xl bg-white shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center !p-0 h-full">
-          <img src={bgImg2.src} class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale mix-blend-overlay transition-transform duration-700 hover:scale-110" alt="Sustainability" />
-          <div class="absolute inset-0 bg-[#212121]/90"></div>
-          <div class="relative z-10 p-8 flex flex-col md:flex-row gap-8 items-center">
-            <div class="flex-1">
-              <h3 class="text-2xl font-bold mb-3 text-white">Sustainability</h3>
-              <p class="text-gray-300 text-lg">Projects designed with LEED certification, LED lighting, and a treatment water system.</p>
-            </div>
-            <div class="flex-1 border-t md:border-t-0 md:border-l border-white/20 pt-6 md:pt-0 md:pl-8">
-              <h3 class="text-2xl font-bold mb-3 text-white">Access to Talent</h3>
-              <p class="text-gray-300 text-lg">Strategic locations in high-density labor areas to ensure the recruitment of qualified personnel for your workforce.</p>
-            </div>
-          </div>
+        <div class="relative overflow-hidden rounded-3xl bg-[#212121] p-10 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-3xl font-extrabold mb-3 text-[#FFCB42]">Immediate Operation</h3>
+          <p class="text-gray-300 text-lg leading-relaxed">Your leased industrial warehouse is ready for use with total utility feasibility (Power/CFE, Water, and Fiber Optics) so you don't lose a single day of production.</p>
         </div>
       </div>
 
-    </div>
+      <!-- Card 2: Square - Yellow -->
+      <div class="bento-card-anim">
+        <div class="relative overflow-hidden rounded-3xl bg-[#FFCB42] p-8 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-2xl font-extrabold mb-3 text-[#212121]">Cutting-Edge Infrastructure</h3>
+          <p class="text-[#212121]/80 text-lg leading-relaxed">Built with Tilt-Up concrete walls and KR-18 standing seam roofing to guarantee durability and structural safety.</p>
+        </div>
+      </div>
 
-    <div class="mt-16 flex justify-center GSAP-btn">
-      <a href="#contact" class="inline-block px-12 py-4 bg-dark text-white font-bold text-lg rounded-full uppercase tracking-wider transition-all duration-300 hover:bg-primary hover:text-dark hover:-translate-y-1 shadow-xl hover:shadow-primary/30">
-        Contact us now
-      </a>
+      <!-- Card 3: Square - White -->
+      <div class="bento-card-anim">
+        <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-2xl font-extrabold mb-3 text-[#212121]">Logistics Efficiency</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Strategically located in Nuevo León to optimize transit times and reduce operating costs.</p>
+        </div>
+      </div>
+
+      <!-- Card 4: Wide (2 cols) - White -->
+      <div class="bento-card-anim md:col-span-2">
+        <div class="relative overflow-hidden rounded-3xl bg-white p-10 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-3xl font-extrabold mb-3 text-[#212121]">Security &amp; Control</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Master-planned industrial parks with professional infrastructure, controlled access, and 24/7 monitoring.</p>
+        </div>
+      </div>
+
+      <!-- Card 5: Square - Dark -->
+      <div class="bento-card-anim">
+        <div class="relative overflow-hidden rounded-3xl bg-[#212121] p-8 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-2xl font-extrabold mb-3 text-[#FFCB42]">Real Sustainability</h3>
+          <p class="text-gray-300 text-lg leading-relaxed">LEED Certification, energy-efficient LED lighting and on-site water treatment plants.</p>
+        </div>
+      </div>
+
+      <!-- Card 6: 2 cols - Yellow accent border -->
+      <div class="bento-card-anim md:col-span-2">
+        <div class="relative overflow-hidden rounded-3xl bg-white border-l-8 border-[#FFCB42] p-10 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-2xl font-extrabold mb-3 text-[#212121]">Access to Talent</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Facilities situated in high-density labor zones within Nuevo León to ensure access to a qualified workforce.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
