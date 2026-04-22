@@ -2,11 +2,10 @@
 import formImg from '../assets/images/interior_3.jpeg';
 ---
 
-<section id="contact" class="min-h-screen flex flex-col overflow-hidden">
-
+<section id="contact" class="flex overflow-hidden">
 
   <!-- Bottom: Split layout -->
-  <div class="flex flex-col lg:flex-row flex-1">
+  <div class="flex flex-col lg:flex-row w-full min-h-screen">
 
     <!-- Left: Yellow + Image full height -->
     <div class="hidden lg:flex w-1/2 bg-primary relative overflow-hidden">
@@ -111,19 +110,9 @@ import formImg from '../assets/images/interior_3.jpeg';
 
   // Animations
   document.addEventListener("DOMContentLoaded", () => {
-    gsap.fromTo('.gs-form-bg', 
-      { yPercent: 20, scale: 1.1 },
-      { scrollTrigger: { trigger: '#contact', start: "top bottom", scrub: true }, yPercent: 0, scale: 1, ease: "none" }
-    );
-
-    gsap.fromTo('.gs-form-title', 
-      { y: 30, opacity: 0 },
-      { scrollTrigger: { trigger: '.gs-form-title', start: "top 85%" }, y: 0, opacity: 1, duration: 1, clearProps: "all" }
-    );
-
     gsap.fromTo('.gs-form-card', 
       { y: 60, opacity: 0 },
-      { scrollTrigger: { trigger: '.gs-form-title', start: "top 60%" }, y: 0, opacity: 1, duration: 1, ease: "back.out(1)", clearProps: "all" }
+      { scrollTrigger: { trigger: '#contact', start: "top 85%" }, y: 0, opacity: 1, duration: 1, ease: "back.out(1)", clearProps: "all" }
     );
   });
 </script>
