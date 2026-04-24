@@ -15,7 +15,7 @@ import phsLogo from '../assets/images/logotipo-phs-EN-BLANCO.png';
   <!-- Chatbot Script -->
   <script src="https://conversia.com.mx/assets/js/chatbot.js" id="chatbot-js"></script>
   <!-- Limpiar CSS del chatbot -->
-  <link rel="stylesheet" href="chatbot-clean.css\" />
+  <link rel="stylesheet" href={`${import.meta.env.BASE_URL}/chatbot-clean.css`} />
 
   <script is:inline>
     // Destruir el CSS problemático sin importar cómo y cuándo se inyecte
