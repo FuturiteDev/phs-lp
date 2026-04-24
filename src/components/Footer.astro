@@ -11,4 +11,31 @@ import phsLogo from '../assets/images/logotipo-phs-EN-BLANCO.png';
       &copy; 2026 Todos Los Derechos Reservados.
     </div>
   </div>
+
+  <!-- Chatbot Script -->
+  <script src="https://conversia.com.mx/assets/js/chatbot.js" id="chatbot-js"></script>
+  <!-- Limpiar CSS del chatbot -->
+  <link rel="stylesheet" href="chatbot-clean.css\" />
+
+  <script is:inline>
+    // Destruir el CSS problemático sin importar cómo y cuándo se inyecte
+    const watcher = new MutationObserver(() => {
+      document.querySelectorAll('link[href*="chatbot.css"]').forEach((link) => {
+        // Permitir solo nuestra versión local limpia
+        if (!link.href.includes("/chatbot-clean.css")) {
+          link.disabled = true;
+          link.remove();
+        }
+      });
+    });
+    watcher.observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+    });
+
+    CHATKODEX.init({
+      host: window.location.host,
+      key: "JOx8h9PQdIb2S",
+    });
+  </script>
 </footer>
