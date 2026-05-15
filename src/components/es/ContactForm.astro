@@ -88,8 +88,9 @@ import formImg from '../../assets/images/interior_3.jpeg';
         formMessage.classList.remove('hidden', 'bg-red-500/20', 'text-red-200');
         if (response.ok) {
           form.reset();
-          formMessage.textContent = '¡Mensaje enviado! Nos pondremos en contacto pronto.';
-          formMessage.classList.add('bg-green-500/20', 'text-green-200', 'border', 'border-green-500/30');
+          const base = import.meta.env.BASE_URL || '';
+          const baseUrl = base.endsWith('/') ? base.slice(0, -1) : base;
+          window.location.href = `${baseUrl}/es/gracias`;
         } else {
           throw new Error('Error en la respuesta');
         }
