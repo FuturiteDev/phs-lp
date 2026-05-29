@@ -4,7 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  //base: '/naves-industriales',
+  site: 'https://phs-desarrollos.com',
+  base: '/naves-industriales',
   vite: {
     plugins: [tailwindcss()],
   },

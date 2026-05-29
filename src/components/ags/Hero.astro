@@ -1,0 +1,37 @@
+---
+import phsLogo from '../../assets/images/logotipo-phs-EN-BLANCO.png'
+import heroBg from '../../assets/images/AGS-04-IM206.webp'
+---
+
+<header class="relative w-full h-[80vh] min-h-[600px] flex flex-col justify-between overflow-hidden bg-dark">
+    <!-- GSAP Background Element -->
+    <div class="absolute inset-0 z-0 opacity-40">
+        <img src={heroBg.src} alt="Fondo Hero" class="w-full h-full object-cover hero-bg-img" />
+        <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-dark/30 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pt-8">
+        <img src={phsLogo.src} alt="PHS Logistics" class="h-12 md:h-16 w-auto object-contain opacity-90" />
+    </div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pb-20 flex flex-col items-start justify-end h-full gap-6">
+        <h1 class="hero-title text-primary text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-left">
+            Renta de<br />naves industriales<br />en Aguascalientes
+        </h1>
+        <p class="hero-desc text-white text-lg font-light text-left whitespace-nowrap">En Desarrollo | Reserva tu Espacio para 2026</p>
+        <a href="#contact" class="hero-btn inline-block px-8 py-4 bg-white text-dark font-bold uppercase tracking-wide rounded-lg transition-all hover:bg-primary hover:scale-105 shadow-xl"> Cotizar ahora </a>
+    </div>
+</header>
+
+<script>
+    import { gsap } from 'gsap'
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const tl = gsap.timeline()
+
+        tl.fromTo('.hero-bg-img', { scale: 1.1, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.5, ease: 'power2.out' })
+            .fromTo('.hero-title', { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=1')
+            .fromTo('.hero-desc', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+            .fromTo('.hero-btn', { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(1.7)' }, '-=0.4')
+    })
+</script>

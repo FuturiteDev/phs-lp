@@ -1,5 +1,5 @@
 ---
-import formImg from '../../assets/images/interior_3.jpeg'
+import formImg from '../../assets/images/AGS-04-IM216.webp'
 ---
 
 <section id="contact" class="flex overflow-hidden">
@@ -16,33 +16,33 @@ import formImg from '../../assets/images/interior_3.jpeg'
                 <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark leading-tight">Hablemos de tu<br />proyecto industrial.</h3>
             </div>
 
-            <form id="contactFormES" class="flex flex-col gap-5 gs-form-card">
+            <form id="contactFormAGS" class="flex flex-col gap-5 gs-form-card">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div class="flex flex-col">
-                        <label for="nombre_es" class="text-dark text-sm font-semibold mb-1">Nombre completo</label>
-                        <input type="text" id="nombre_es" name="nombre" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="Juan Pérez" required />
+                        <label for="nombre_ags" class="text-dark text-sm font-semibold mb-1">Nombre completo</label>
+                        <input type="text" id="nombre_ags" name="nombre" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="Juan Pérez" required />
                     </div>
                     <div class="flex flex-col">
-                        <label for="telefono_es" class="text-dark text-sm font-semibold mb-1">Teléfono</label>
-                        <input type="tel" id="telefono_es" name="telefono" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="(555) 000-0000" required />
+                        <label for="telefono_ags" class="text-dark text-sm font-semibold mb-1">Teléfono</label>
+                        <input type="tel" id="telefono_ags" name="telefono" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="(555) 000-0000" required />
                     </div>
                 </div>
 
                 <div class="flex flex-col">
-                    <label for="correo_es" class="text-dark text-sm font-semibold mb-1">Correo electrónico</label>
-                    <input type="email" id="correo_es" name="correo" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="juan@empresa.com" required />
+                    <label for="correo_ags" class="text-dark text-sm font-semibold mb-1">Correo electrónico</label>
+                    <input type="email" id="correo_ags" name="correo" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="juan@empresa.com" required />
                 </div>
 
                 <div class="flex flex-col">
-                    <label for="mensaje_es" class="text-dark text-sm font-semibold mb-1">Mensaje</label>
-                    <textarea id="mensaje_es" name="mensaje" rows="3" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body resize-none" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                    <label for="mensaje_ags" class="text-dark text-sm font-semibold mb-1">Mensaje</label>
+                    <textarea id="mensaje_ags" name="mensaje" rows="3" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body resize-none" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
                 </div>
 
                 <button type="submit" class="mt-4 px-8 py-4 bg-white text-dark font-bold text-lg rounded-lg uppercase tracking-wider hover:bg-dark hover:text-white transition-all duration-300 shadow-lg transform hover:-translate-y-1">
-                    <span id="btnTextES">Enviar</span>
+                    <span id="btnTextAGS">Enviar</span>
                 </button>
 
-                <div id="formMessageES" class="hidden mt-2 p-4 rounded-xl text-center font-medium font-body transition-all"></div>
+                <div id="formMessageAGS" class="hidden mt-2 p-4 rounded-xl text-center font-medium font-body transition-all"></div>
             </form>
         </div>
     </div>
@@ -54,9 +54,9 @@ import formImg from '../../assets/images/interior_3.jpeg'
 
     gsap.registerPlugin(ScrollTrigger)
 
-    const form = document.getElementById('contactFormES') as HTMLFormElement
-    const btnText = document.getElementById('btnTextES')
-    const formMessage = document.getElementById('formMessageES')
+    const form = document.getElementById('contactFormAGS') as HTMLFormElement
+    const btnText = document.getElementById('btnTextAGS')
+    const formMessage = document.getElementById('formMessageAGS')
 
     if (form) {
         form.addEventListener('submit', async (e) => {
@@ -68,7 +68,7 @@ import formImg from '../../assets/images/interior_3.jpeg'
                 telefono: formData.get('telefono'),
                 correo: formData.get('correo'),
                 mensaje: formData.get('mensaje'),
-                origen: 'https://phs-desarrollos.com/naves-industriales/es/',
+                origen: 'https://phs-desarrollos.com/naves-industriales/ags/',
             }
 
             try {
@@ -86,7 +86,7 @@ import formImg from '../../assets/images/interior_3.jpeg'
                     form.reset()
                     const base = import.meta.env.BASE_URL || ''
                     const baseUrl = base.endsWith('/') ? base.slice(0, -1) : base
-                    window.location.href = `${baseUrl}/es/gracias/`
+                    window.location.href = `${baseUrl}/ags/gracias/`
                 } else {
                     throw new Error('Error en la respuesta')
                 }

@@ -1,0 +1,62 @@
+---
+---
+
+<section class="py-24 bg-[#E5E7EB] relative">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 bento-title-anim">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-dark inline-block relative">
+        Beneficios Clave
+        <span class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary"></span>
+      </h2>
+    </div>
+    
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Tarjeta 1: Ancha - Oscura (Eficiencia Logística) -->
+      <div class="bento-card-anim md:col-span-2">
+        <div class="relative overflow-hidden rounded-3xl bg-[#212121] p-10 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-3xl font-extrabold mb-3 text-[#FFCB42]">Eficiencia Logística</h3>
+          <p class="text-gray-300 text-lg leading-relaxed">Ubicación estratégica con conectividad ideal para una nave industrial logística en Aguascalientes, optimizando tiempos de traslado y costos operativos hacia las principales arterias del país.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: Cuadrada - Amarilla (Seguridad y Control) -->
+      <div class="bento-card-anim">
+        <div class="relative overflow-hidden rounded-3xl bg-[#FFCB42] p-8 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-2xl font-extrabold mb-3 text-[#212121]">Seguridad y Control</h3>
+          <p class="text-[#212121]/80 text-lg leading-relaxed">Parque industrial con planeación de infraestructura y urbanización de vanguardia. Tu futura bodega industrial en Aguascalientes contará con acceso controlado, barda perimetral y monitoreo 24/7.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Cuadrada - Blanca (Sustentabilidad Real) -->
+      <div class="bento-card-anim">
+        <div class="relative overflow-hidden rounded-3xl bg-white p-8 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-2xl font-extrabold mb-3 text-[#212121]">Sustentabilidad Real</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Lleva tu operación al siguiente nivel con una nave industrial con certificación LEED Aguascalientes. Cuenta con iluminación LED, planta tratadora de agua y diseño eco-eficiente.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4: Ancha - Blanca con borde amarillo (Acceso a Talento) -->
+      <div class="bento-card-anim md:col-span-2">
+        <div class="relative overflow-hidden rounded-3xl bg-white border-l-8 border-[#FFCB42] p-10 shadow-md transition-shadow duration-300 hover:shadow-xl flex flex-col justify-center h-full min-h-[220px]">
+          <h3 class="text-3xl font-extrabold mb-3 text-[#212121]">Acceso a Talento</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Nuestra nave industrial en renta en Aguascalientes se encuentra en fase de desarrollo dentro de una zona de alta densidad laboral, lo que asegurará la atracción y contratación de personal calificado para tu próxima fase operativa.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.fromTo('.bento-title-anim', { y: 40, opacity: 0 }, { scrollTrigger: { trigger: '.bento-title-anim', start: "top 80%" }, y: 0, opacity: 1, duration: 0.8 });
+    gsap.fromTo('.bento-card-anim', { y: 60, opacity: 0 }, { scrollTrigger: { trigger: '.bento-title-anim', start: "top 60%" }, y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "back.out(1.2)", clearProps: "all" });
+  });
+</script>

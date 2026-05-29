@@ -3,18 +3,30 @@ import '../styles/global.css';
 
 interface Props {
 	title: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
-const isEs = Astro.url.pathname.includes('/es');
+const { title, description } = Astro.props;
+const isAgs = Astro.url.pathname.includes('/ags');
+const isEs = Astro.url.pathname.includes('/es') || isAgs;
+
+const defaultDescription = isAgs
+	? "PHS Desarrollos - Renta de naves industriales en Aguascalientes. Encuentra la nave ideal para tu empresa en nuestros parques logísticos."
+	: isEs
+		? "PHS Desarrollos - Renta de naves industriales en Nuevo León. Encuentra la nave ideal para tu empresa en nuestros parques logísticos."
+		: "PHS Desarrollos - Industrial warehouse leasing in Nuevo Leon. Find the ideal facility for your company within our logistics parks.";
+
+const metaDescription = description || defaultDescription;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://phs-desarrollos.com').href;
 ---
 
 <!DOCTYPE html>
 <html lang={isEs ? "es" : "en"}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="PHS Desarrollos - Industrial Warehouse Leasing">
+		<meta name="description" content={metaDescription}>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="canonical" href={canonicalUrl} />
 		<link rel="icon" href="https://phs-desarrollos.com/wp-content/uploads/2026/02/cropped-Favicon-PHS-32x32.png" sizes="32x32">
 		<link rel="icon" href="https://phs-desarrollos.com/wp-content/uploads/2026/02/cropped-Favicon-PHS-192x192.png" sizes="192x192">
 		<link rel="apple-touch-icon" href="https://phs-desarrollos.com/wp-content/uploads/2026/02/cropped-Favicon-PHS-180x180.png">

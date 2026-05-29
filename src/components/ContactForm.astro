@@ -1,123 +1,116 @@
 ---
-import formImg from '../assets/images/interior_3.jpeg';
+import formImg from '../assets/images/interior_3.jpeg'
 ---
 
 <section id="contact" class="flex overflow-hidden">
+    <!-- Bottom: Split layout -->
+    <div class="flex flex-col lg:flex-row w-full min-h-screen">
+        <!-- Left: Yellow + Image full height -->
+        <div class="hidden lg:flex w-1/2 bg-primary relative overflow-hidden">
+            <img src={formImg.src} alt="Industrial Interior" class="gs-form-bg absolute inset-0 w-full h-full object-cover" />
+        </div>
 
-  <!-- Bottom: Split layout -->
-  <div class="flex flex-col lg:flex-row w-full min-h-screen">
+        <!-- Right: Yellow Form Panel -->
+        <div class="w-full lg:w-1/2 bg-primary flex flex-col justify-center px-8 md:px-16 py-16">
+            <div class="gs-form-card mb-8">
+                <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark leading-tight">Let's discuss your<br />industrial project.</h3>
+            </div>
 
-    <!-- Left: Yellow + Image full height -->
-    <div class="hidden lg:flex w-1/2 bg-primary relative overflow-hidden">
-      <img src={formImg.src} alt="Industrial Interior" class="gs-form-bg absolute inset-0 w-full h-full object-cover" />
+            <form id="contactForm" class="flex flex-col gap-5 gs-form-card">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="flex flex-col">
+                        <label for="nombre" class="text-dark text-sm font-semibold mb-1">Full name</label>
+                        <input type="text" id="nombre" name="nombre" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="John Doe" required />
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="telefono" class="text-dark text-sm font-semibold mb-1">Phone</label>
+                        <input type="tel" id="telefono" name="telefono" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="(555) 000-0000" required />
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="correo" class="text-dark text-sm font-semibold mb-1">Email</label>
+                    <input type="email" id="correo" name="correo" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="john@example.com" required />
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="mensaje" class="text-dark text-sm font-semibold mb-1">Message</label>
+                    <textarea id="mensaje" name="mensaje" rows="3" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body resize-none" placeholder="Tell us about your project..." required></textarea>
+                </div>
+
+                <button type="submit" class="mt-4 px-8 py-4 bg-white text-dark font-bold text-lg rounded-lg uppercase tracking-wider hover:bg-dark hover:text-white transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+                    <span id="btnText">Submit</span>
+                </button>
+
+                <div id="formMessage" class="hidden mt-2 p-4 rounded-xl text-center font-medium font-body transition-all"></div>
+            </form>
+        </div>
     </div>
-
-    <!-- Right: Yellow Form Panel -->
-    <div class="w-full lg:w-1/2 bg-primary flex flex-col justify-center px-8 md:px-16 py-16">
-      <div class="gs-form-card mb-8">
-        <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark leading-tight">Let's discuss your<br/>industrial project.</h3>
-      </div>
-
-      <form id="contactForm" class="flex flex-col gap-5 gs-form-card">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div class="flex flex-col">
-            <label for="nombre" class="text-dark text-sm font-semibold mb-1">Full name</label>
-            <input type="text" id="nombre" name="nombre" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="John Doe" required>
-          </div>
-          <div class="flex flex-col">
-            <label for="telefono" class="text-dark text-sm font-semibold mb-1">Phone</label>
-            <input type="tel" id="telefono" name="telefono" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="(555) 000-0000" required>
-          </div>
-        </div>
-
-        <div class="flex flex-col">
-          <label for="correo" class="text-dark text-sm font-semibold mb-1">Email</label>
-          <input type="email" id="correo" name="correo" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body" placeholder="john@example.com" required>
-        </div>
-
-        <div class="flex flex-col">
-          <label for="mensaje" class="text-dark text-sm font-semibold mb-1">Message</label>
-          <textarea id="mensaje" name="mensaje" rows="3" class="bg-transparent border-b-2 border-dark/40 px-0 py-2 text-dark placeholder-dark/40 focus:outline-none focus:border-dark transition-all font-body resize-none" placeholder="Tell us about your project..." required></textarea>
-        </div>
-
-        <button type="submit" class="mt-4 px-8 py-4 bg-white text-dark font-bold text-lg rounded-lg uppercase tracking-wider hover:bg-dark hover:text-white transition-all duration-300 shadow-lg transform hover:-translate-y-1">
-          <span id="btnText">Submit</span>
-        </button>
-
-        <div id="formMessage" class="hidden mt-2 p-4 rounded-xl text-center font-medium font-body transition-all"></div>
-      </form>
-    </div>
-
-  </div>
-
 </section>
 
 <script>
-  import { gsap } from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import { gsap } from 'gsap'
+    import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-  gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
-  // Form Logic
-  const form = document.getElementById('contactForm') as HTMLFormElement;
-  const btnText = document.getElementById('btnText');
-  const formMessage = document.getElementById('formMessage');
+    // Form Logic
+    const form = document.getElementById('contactForm') as HTMLFormElement
+    const btnText = document.getElementById('btnText')
+    const formMessage = document.getElementById('formMessage')
 
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      if (!btnText || !formMessage) return;
-      
-      const formData = new FormData(form);
-      const data = {
-        nombre: formData.get('nombre'),
-        telefono: formData.get('telefono'),
-        correo: formData.get('correo'),
-        mensaje: formData.get('mensaje'),
-        origen: 'https://phs-desarrollos.com/naves-industriales'
-      };
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault()
 
-      try {
-        btnText.textContent = 'Enviando...';
-        const response = await fetch('https://n8n.ongoing.mx/webhook/c858672b-7cff-40e0-bc29-f03b41febad7', {
-          method: 'POST',
-          headers: { 
-            'Content-Type': 'application/json',
-            'phs': 'Huo0lpaw.'
-          },
-          body: JSON.stringify(data)
-        });
+            if (!btnText || !formMessage) return
 
-        formMessage.classList.remove('hidden', 'bg-red-500/20', 'text-red-200');
-        
-        if (response.ok) {
-          form.reset();
-          const base = import.meta.env.BASE_URL || '';
-          const baseUrl = base.endsWith('/') ? base.slice(0, -1) : base;
-          window.location.href = `${baseUrl}/thanks`;
-        } else {
-          throw new Error('Network response was not ok');
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        formMessage.textContent = 'There was an error sending your message. Please try again later.';
-        formMessage.classList.add('bg-red-500/20', 'text-red-200', 'border', 'border-red-500/30');
-      } finally {
-        btnText.textContent = 'Send Message';
-        setTimeout(() => {
-          formMessage.classList.add('hidden');
-          formMessage.className = 'hidden mt-4 p-4 rounded-xl text-center font-medium font-body transition-all';
-        }, 6000);
-      }
-    });
-  }
+            const formData = new FormData(form)
+            const data = {
+                nombre: formData.get('nombre'),
+                telefono: formData.get('telefono'),
+                correo: formData.get('correo'),
+                mensaje: formData.get('mensaje'),
+                origen: 'https://phs-desarrollos.com/naves-industriales/',
+            }
 
-  // Animations
-  document.addEventListener("DOMContentLoaded", () => {
-    gsap.fromTo('.gs-form-card', 
-      { y: 60, opacity: 0 },
-      { scrollTrigger: { trigger: '#contact', start: "top 85%" }, y: 0, opacity: 1, duration: 1, ease: "back.out(1)", clearProps: "all" }
-    );
-  });
+            try {
+                btnText.textContent = 'Enviando...'
+                const response = await fetch('https://n8n.ongoing.mx/webhook/c858672b-7cff-40e0-bc29-f03b41febad7', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        phs: 'Huo0lpaw.',
+                    },
+                    body: JSON.stringify(data),
+                })
+
+                formMessage.classList.remove('hidden', 'bg-red-500/20', 'text-red-200')
+
+                if (response.ok) {
+                    form.reset()
+                    const base = import.meta.env.BASE_URL || ''
+                    const baseUrl = base.endsWith('/') ? base.slice(0, -1) : base
+                    window.location.href = `${baseUrl}/thanks/`
+                } else {
+                    throw new Error('Network response was not ok')
+                }
+            } catch (error) {
+                console.error('Error:', error)
+                formMessage.textContent = 'There was an error sending your message. Please try again later.'
+                formMessage.classList.add('bg-red-500/20', 'text-red-200', 'border', 'border-red-500/30')
+            } finally {
+                btnText.textContent = 'Send Message'
+                setTimeout(() => {
+                    formMessage.classList.add('hidden')
+                    formMessage.className = 'hidden mt-4 p-4 rounded-xl text-center font-medium font-body transition-all'
+                }, 6000)
+            }
+        })
+    }
+
+    // Animations
+    document.addEventListener('DOMContentLoaded', () => {
+        gsap.fromTo('.gs-form-card', { y: 60, opacity: 0 }, { scrollTrigger: { trigger: '#contact', start: 'top 85%' }, y: 0, opacity: 1, duration: 1, ease: 'back.out(1)', clearProps: 'all' })
+    })
 </script>
